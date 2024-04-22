@@ -230,6 +230,7 @@ components:
           $ref: '#/components/schemas/Address'
         contactInformation:
           type: array
+          nullable: true
           items:
             $ref: '#/components/schemas/ContactInformation'
     Address:

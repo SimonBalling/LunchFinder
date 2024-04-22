@@ -14,7 +14,7 @@
       "verbose": true,
       "workingDirectory": null,
       "aspNetCoreEnvironment": null,
-      "output": "../Api/swagger.yaml",
+      "output": "test.json",
       "newLineBehavior": "Auto"
     }
   },
@@ -97,13 +97,13 @@
       "inlineNamedDictionaries": false,
       "inlineNamedTuples": true,
       "inlineNamedAny": false,
-      "generateDtoTypes": true,
+      "generateDtoTypes": false,
       "generateOptionalPropertiesAsNullable": false,
       "generateNullableReferenceTypes": false,
       "templateDirectory": null,
       "serviceHost": null,
       "serviceSchemes": null,
-      "output": "../Api/LunchFinderApiClient.cs",
+      "output": "LunchFinderApiClient.cs",
       "newLineBehavior": "Auto"
     }
   }

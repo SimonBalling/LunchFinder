@@ -35,7 +35,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Client\LunchFinder.Client.csproj" />
+    <ProjectReference Include="..\..\sHARED\Shared.csproj" />
   </ItemGroup>
 
 	<Target Name="NSwag" AfterTargets="PostBuildEvent" Condition=" '$(Configuration)' == 'Debug' ">

@@ -1,7 +1,7 @@
 ﻿namespace LunchFinder.Server.Places
 {
     using Tags;
-
+    
     public class Place
     {
         public int Id { get; set; }
@@ -9,8 +9,7 @@
         public string Description { get; set; }
         public List<Tag> Tags { get; set; }
         public Address Address { get; set; }
-        public List<ContactInformation> ContactInformation { get; set; }
-
+        public List<ContactInformation>? ContactInformation { get; set; }
     }
 
     public class Address
