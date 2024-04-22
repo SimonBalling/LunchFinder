@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using LunchFinder.Server.Tags;
+using LunchFinder.Server.Places;
 
 namespace LunchFinder.Server.Data
 {
@@ -13,5 +14,7 @@ namespace LunchFinder.Server.Data
     {
         public DbSet<Tag> Tags { get; set; } = default!;
         public DbSet<Place> Places { get; set; } = default!;
+
+public DbSet<LunchFinder.Server.Places.Address> Address { get; set; } = default!;
     }
 }

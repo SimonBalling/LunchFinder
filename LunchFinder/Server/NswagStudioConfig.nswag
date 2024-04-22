@@ -14,7 +14,7 @@
       "verbose": true,
       "workingDirectory": null,
       "aspNetCoreEnvironment": null,
-      "output": "test.json",
+      "output": "../Api/swagger.yaml",
       "newLineBehavior": "Auto"
     }
   },
@@ -103,7 +103,7 @@
       "templateDirectory": null,
       "serviceHost": null,
       "serviceSchemes": null,
-      "output": "LunchFinderApiClient.cs",
+      "output": "../Api/LunchFinderApiClient.cs",
       "newLineBehavior": "Auto"
     }
   }
