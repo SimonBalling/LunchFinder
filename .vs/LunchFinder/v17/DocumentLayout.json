@@ -3,27 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\balli\\source\\repos\\LunchFinder\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7B0CABB2-F511-4E9B-9E87-823F38A2862F}|LunchFinder\\Server\\LunchFinder.Server.csproj|c:\\users\\balli\\source\\repos\\lunchfinder\\lunchfinder\\server\\tags\\addressescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B0CABB2-F511-4E9B-9E87-823F38A2862F}|LunchFinder\\Server\\LunchFinder.Server.csproj|solutionrelative:lunchfinder\\server\\tags\\addressescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B0CABB2-F511-4E9B-9E87-823F38A2862F}|LunchFinder\\Server\\LunchFinder.Server.csproj|c:\\users\\balli\\source\\repos\\lunchfinder\\lunchfinder\\server\\places\\placescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B0CABB2-F511-4E9B-9E87-823F38A2862F}|LunchFinder\\Server\\LunchFinder.Server.csproj|solutionrelative:lunchfinder\\server\\places\\placescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B0CABB2-F511-4E9B-9E87-823F38A2862F}|LunchFinder\\Server\\LunchFinder.Server.csproj|c:\\users\\balli\\source\\repos\\lunchfinder\\lunchfinder\\server\\tags\\tagendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B0CABB2-F511-4E9B-9E87-823F38A2862F}|LunchFinder\\Server\\LunchFinder.Server.csproj|solutionrelative:lunchfinder\\server\\tags\\tagendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B0CABB2-F511-4E9B-9E87-823F38A2862F}|LunchFinder\\Server\\LunchFinder.Server.csproj|c:\\users\\balli\\source\\repos\\lunchfinder\\lunchfinder\\server\\tags\\tagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B0CABB2-F511-4E9B-9E87-823F38A2862F}|LunchFinder\\Server\\LunchFinder.Server.csproj|solutionrelative:lunchfinder\\server\\tags\\tagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75BF302B-23CC-4928-AC8D-A98C0B68E499}|LunchFinder\\Client\\LunchFinder.Client.csproj|c:\\users\\balli\\source\\repos\\lunchfinder\\lunchfinder\\client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75BF302B-23CC-4928-AC8D-A98C0B68E499}|LunchFinder\\Client\\LunchFinder.Client.csproj|solutionrelative:lunchfinder\\client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97DBE1DA-5A2F-436A-8A98-9E11DFEEA618}|LunchFinder\\Api\\LunchFinder.Api.csproj|c:\\users\\balli\\source\\repos\\lunchfinder\\lunchfinder\\api\\lunchfinderapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97DBE1DA-5A2F-436A-8A98-9E11DFEEA618}|LunchFinder\\Api\\LunchFinder.Api.csproj|solutionrelative:lunchfinder\\api\\lunchfinderapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\balli\\AppData\\Local\\SourceServer\\299b9a3fe0ac0c76d4a1192612d4c02e87565c5f7c2fbb9a8df14fb9f103b509\\src\\Http\\Headers\\src\\HttpHeaderParser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B0CABB2-F511-4E9B-9E87-823F38A2862F}|LunchFinder\\Server\\LunchFinder.Server.csproj|c:\\users\\balli\\source\\repos\\lunchfinder\\lunchfinder\\server\\data\\lunchfinderservercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B0CABB2-F511-4E9B-9E87-823F38A2862F}|LunchFinder\\Server\\LunchFinder.Server.csproj|solutionrelative:lunchfinder\\server\\data\\lunchfinderservercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B0CABB2-F511-4E9B-9E87-823F38A2862F}|LunchFinder\\Server\\LunchFinder.Server.csproj|c:\\users\\balli\\source\\repos\\lunchfinder\\lunchfinder\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B0CABB2-F511-4E9B-9E87-823F38A2862F}|LunchFinder\\Server\\LunchFinder.Server.csproj|solutionrelative:lunchfinder\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 161,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 18,
           "Children": [
             {
               "$type": "Bookmark",
@@ -96,81 +85,46 @@
               "Name": "ST:1:0:{7f40df72-066b-4810-a08b-c0fbed76c948}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LunchFinderServerContext.cs",
-              "DocumentMoniker": "C:\\Users\\balli\\source\\repos\\LunchFinder\\LunchFinder\\Server\\Data\\LunchFinderServerContext.cs",
-              "RelativeDocumentMoniker": "LunchFinder\\Server\\Data\\LunchFinderServerContext.cs",
-              "ToolTip": "C:\\Users\\balli\\source\\repos\\LunchFinder\\LunchFinder\\Server\\Data\\LunchFinderServerContext.cs",
-              "RelativeToolTip": "LunchFinder\\Server\\Data\\LunchFinderServerContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T05:06:31.653Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AddressesController.cs",
-              "DocumentMoniker": "C:\\Users\\balli\\source\\repos\\LunchFinder\\LunchFinder\\Server\\Tags\\AddressesController.cs",
-              "RelativeDocumentMoniker": "LunchFinder\\Server\\Tags\\AddressesController.cs",
-              "ToolTip": "C:\\Users\\balli\\source\\repos\\LunchFinder\\LunchFinder\\Server\\Tags\\AddressesController.cs",
-              "RelativeToolTip": "LunchFinder\\Server\\Tags\\AddressesController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T05:07:01.215Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HttpHeaderParser.cs",
-              "DocumentMoniker": "C:\\Users\\balli\\AppData\\Local\\SourceServer\\299b9a3fe0ac0c76d4a1192612d4c02e87565c5f7c2fbb9a8df14fb9f103b509\\src\\Http\\Headers\\src\\HttpHeaderParser.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\SourceServer\\299b9a3fe0ac0c76d4a1192612d4c02e87565c5f7c2fbb9a8df14fb9f103b509\\src\\Http\\Headers\\src\\HttpHeaderParser.cs",
-              "ToolTip": "C:\\Users\\balli\\AppData\\Local\\SourceServer\\299b9a3fe0ac0c76d4a1192612d4c02e87565c5f7c2fbb9a8df14fb9f103b509\\src\\Http\\Headers\\src\\HttpHeaderParser.cs",
-              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\SourceServer\\299b9a3fe0ac0c76d4a1192612d4c02e87565c5f7c2fbb9a8df14fb9f103b509\\src\\Http\\Headers\\src\\HttpHeaderParser.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAAwCsAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T05:16:42.454Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TagEndpoints.cs",
-              "DocumentMoniker": "C:\\Users\\balli\\source\\repos\\LunchFinder\\LunchFinder\\Server\\Tags\\TagEndpoints.cs",
-              "RelativeDocumentMoniker": "LunchFinder\\Server\\Tags\\TagEndpoints.cs",
-              "ToolTip": "C:\\Users\\balli\\source\\repos\\LunchFinder\\LunchFinder\\Server\\Tags\\TagEndpoints.cs",
-              "RelativeToolTip": "LunchFinder\\Server\\Tags\\TagEndpoints.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T05:36:56.674Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LunchFinderApiClient.cs",
-              "DocumentMoniker": "C:\\Users\\balli\\source\\repos\\LunchFinder\\LunchFinder\\Api\\LunchFinderApiClient.cs",
-              "RelativeDocumentMoniker": "LunchFinder\\Api\\LunchFinderApiClient.cs",
-              "ToolTip": "C:\\Users\\balli\\source\\repos\\LunchFinder\\LunchFinder\\Api\\LunchFinderApiClient.cs",
-              "RelativeToolTip": "LunchFinder\\Api\\LunchFinderApiClient.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T05:46:39.401Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\balli\\source\\repos\\LunchFinder\\LunchFinder\\Client\\Program.cs",
-              "RelativeDocumentMoniker": "LunchFinder\\Client\\Program.cs",
-              "ToolTip": "C:\\Users\\balli\\source\\repos\\LunchFinder\\LunchFinder\\Client\\Program.cs",
-              "RelativeToolTip": "LunchFinder\\Client\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "DocumentMoniker": "C:\\Users\\balli\\source\\repos\\LunchFinder\\LunchFinder\\Server\\Program.cs",
+              "RelativeDocumentMoniker": "LunchFinder\\Server\\Program.cs",
+              "ToolTip": "C:\\Users\\balli\\source\\repos\\LunchFinder\\LunchFinder\\Server\\Program.cs",
+              "RelativeToolTip": "LunchFinder\\Server\\Program.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAkwDsAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T06:01:37.306Z",
+              "WhenOpened": "2024-04-22T06:59:19.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TagsController.cs",
+              "DocumentMoniker": "C:\\Users\\balli\\source\\repos\\LunchFinder\\LunchFinder\\Server\\Tags\\TagsController.cs",
+              "RelativeDocumentMoniker": "LunchFinder\\Server\\Tags\\TagsController.cs",
+              "ToolTip": "C:\\Users\\balli\\source\\repos\\LunchFinder\\LunchFinder\\Server\\Tags\\TagsController.cs",
+              "RelativeToolTip": "LunchFinder\\Server\\Tags\\TagsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T06:59:51.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlacesController.cs",
+              "DocumentMoniker": "C:\\Users\\balli\\source\\repos\\LunchFinder\\LunchFinder\\Server\\Places\\PlacesController.cs",
+              "RelativeDocumentMoniker": "LunchFinder\\Server\\Places\\PlacesController.cs",
+              "ToolTip": "C:\\Users\\balli\\source\\repos\\LunchFinder\\LunchFinder\\Server\\Places\\PlacesController.cs",
+              "RelativeToolTip": "LunchFinder\\Server\\Places\\PlacesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T07:01:03.336Z",
               "EditorCaption": ""
             }
           ]
