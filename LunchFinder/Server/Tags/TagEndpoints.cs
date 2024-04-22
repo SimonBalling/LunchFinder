@@ -1,13 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using LunchFinder.Server.Data;
-using LunchFinder.Shared.Models;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.OpenApi;
-namespace LunchFinder.Server.Controllers;
+namespace LunchFinder.Server.Tags;
 
 public static class TagEndpoints
 {
-    public static void MapTagEndpoints (this IEndpointRouteBuilder routes)
+    public static void MapTagEndpoints(this IEndpointRouteBuilder routes)
     {
         var group = routes.MapGroup("/api/Tags").WithTags(nameof(Tag));
 
@@ -46,7 +45,7 @@ public static class TagEndpoints
         {
             db.Tags.Add(tag);
             await db.SaveChangesAsync();
-            return TypedResults.Created($"/api/Tags/{tag.Id}",tag);
+            return TypedResults.Created($"/api/Tags/{tag.Id}", tag);
         })
         .WithName("CreateTag")
         .WithOpenApi();

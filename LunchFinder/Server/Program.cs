@@ -3,9 +3,7 @@ using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using LunchFinder.Server.Data;
-using LunchFinder.Server.Controllers;
-using LunchFinder.Shared;
-using LunchFinder.Shared.Models;
+using LunchFinder.Server.Tags;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,7 +16,7 @@ builder.Services.AddDbContext<LunchFinderServerContext>(options =>
         ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("LunchFinderServerContext"))));
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddOpenApiDocument();
 
 var app = builder.Build();
 
@@ -33,7 +31,7 @@ else
     app.UseHsts();
 }
 
-app.UseSwagger();
+app.UseOpenApi();
 app.UseSwaggerUI();
 
 app.UseHttpsRedirection();

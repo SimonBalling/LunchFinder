@@ -3,17 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using LunchFinder.Shared.Models;
+using LunchFinder.Server.Tags;
 
 namespace LunchFinder.Server.Data
 {
-    public class LunchFinderServerContext : DbContext
+    public class LunchFinderServerContext(DbContextOptions<LunchFinderServerContext> options) : DbContext(options)
     {
-        public LunchFinderServerContext (DbContextOptions<LunchFinderServerContext> options)
-            : base(options)
-        {
-        }
-
-        public DbSet<LunchFinder.Shared.Models.Tag> Tags { get; set; } = default!;
+        public DbSet<Tag> Tags { get; set; } = default!;
     }
 }
