@@ -62,11 +62,14 @@ paths:
     put:
       tags:
       - Tag
-      operationId: UpdateTag
+      summary: with SUmmary
+      description: returns Description
+      operationId: PutApiTags
       parameters:
       - name: id
         in: path
         required: true
+        description: this is an id
         schema:
           type: integer
           format: int32
@@ -235,11 +238,13 @@ paths:
     get:
       tags:
       - Addresses
+      summary: Get Address
       operationId: Addresses_GetAddress
       parameters:
       - name: id
         in: path
         required: true
+        description: Address id
         schema:
           type: integer
           format: int32
@@ -251,6 +256,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Address'
+        404:
+          description: The specified employee does not exist, or the current user does not have access to it.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
     put:
       tags:
       - Addresses
@@ -362,3 +373,24 @@ components:
           type: string
         value:
           type: string
+    ProblemDetails:
+      type: object
+      additionalProperties:
+        nullable: true
+      properties:
+        type:
+          type: string
+          nullable: true
+        title:
+          type: string
+          nullable: true
+        status:
+          type: integer
+          format: int32
+          nullable: true
+        detail:
+          type: string
+          nullable: true
+        instance:
+          type: string
+          nullable: true

@@ -19,7 +19,10 @@ builder.Services.AddDbContext<LunchFinderServerContext>(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApiDocument();
 
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.EnableAnnotations();
+});
 
 var app = builder.Build();
 

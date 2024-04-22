@@ -4,6 +4,10 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.OpenApi;
 namespace LunchFinder.Server.Tags;
 
+using System.ComponentModel;
+using System.Net;
+using NSwag.Annotations;
+
 public static class TagEndpoints
 {
     public static void MapTagEndpoints(this IEndpointRouteBuilder routes)
@@ -28,7 +32,9 @@ public static class TagEndpoints
         .WithName("GetTagById")
         .WithOpenApi();
 
-        group.MapPut("/{id}", async Task<Results<Ok, NotFound>> (int id, Tag tag, LunchFinderServerContext db) =>
+        
+        group.MapPut("/{id}",
+        async Task<Results<Ok, NotFound>> ([Description("this is an id")]int id, Tag tag, LunchFinderServerContext db) =>
         {
             var affected = await db.Tags
                 .Where(model => model.Id == id)
@@ -38,7 +44,9 @@ public static class TagEndpoints
                     );
             return affected == 1 ? TypedResults.Ok() : TypedResults.NotFound();
         })
-        .WithName("UpdateTag")
+        .WithSummary("with SUmmary")
+        .WithDescription("returns Description")
+        .WithDisplayName("test123")
         .WithOpenApi();
 
         group.MapPost("/", async (Tag tag, LunchFinderServerContext db) =>

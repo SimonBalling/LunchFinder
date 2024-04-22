@@ -310,15 +310,29 @@ namespace Lunchfinder.Api
             }
         }
 
+        /// <summary>
+        /// with SUmmary
+        /// </summary>
+        /// <remarks>
+        /// returns Description
+        /// </remarks>
+        /// <param name="id">this is an id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual System.Threading.Tasks.Task UpdateTagAsync(int id, Tag tag)
+        public virtual System.Threading.Tasks.Task PutApiTagsAsync(int id, Tag tag)
         {
-            return UpdateTagAsync(id, tag, System.Threading.CancellationToken.None);
+            return PutApiTagsAsync(id, tag, System.Threading.CancellationToken.None);
         }
 
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>
+        /// with SUmmary
+        /// </summary>
+        /// <remarks>
+        /// returns Description
+        /// </remarks>
+        /// <param name="id">this is an id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual async System.Threading.Tasks.Task UpdateTagAsync(int id, Tag tag, System.Threading.CancellationToken cancellationToken)
+        public virtual async System.Threading.Tasks.Task PutApiTagsAsync(int id, Tag tag, System.Threading.CancellationToken cancellationToken)
         {
             if (id == null)
                 throw new System.ArgumentNullException("id");
@@ -1204,6 +1218,10 @@ namespace Lunchfinder.Api
             }
         }
 
+        /// <summary>
+        /// Get Address
+        /// </summary>
+        /// <param name="id">Address id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public virtual System.Threading.Tasks.Task<Address> GetAddressAsync(int id)
         {
@@ -1211,6 +1229,10 @@ namespace Lunchfinder.Api
         }
 
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>
+        /// Get Address
+        /// </summary>
+        /// <param name="id">Address id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public virtual async System.Threading.Tasks.Task<Address> GetAddressAsync(int id, System.Threading.CancellationToken cancellationToken)
         {
@@ -1263,6 +1285,16 @@ namespace Lunchfinder.Api
                                 throw new ApiException("Response was null which was not expected.", status_, objectResponse_.Text, headers_, null);
                             }
                             return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ == 404)
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ProblemDetails>(response_, headers_, cancellationToken).ConfigureAwait(false);
+                            if (objectResponse_.Object == null)
+                            {
+                                throw new ApiException("Response was null which was not expected.", status_, objectResponse_.Text, headers_, null);
+                            }
+                            throw new ApiException<ProblemDetails>("The specified employee does not exist, or the current user does not have access to it.", status_, objectResponse_.Text, headers_, objectResponse_.Object, null);
                         }
                         else
                         {

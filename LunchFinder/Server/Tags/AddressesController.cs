@@ -10,6 +10,10 @@ using LunchFinder.Server.Places;
 
 namespace LunchFinder.Server.Tags
 {
+    using System.Net;
+    using System.Net.Mime;
+    using Swashbuckle.AspNetCore.Annotations;
+
     [Route("api/[controller]")]
     [ApiController]
     public class AddressesController : ControllerBase
@@ -28,8 +32,15 @@ namespace LunchFinder.Server.Tags
             return await _context.Address.ToListAsync();
         }
 
-        // GET: api/Addresses/5
+        /// <summary>
+        /// Get Address
+        /// </summary>
+        /// <description>test description</description>
+        /// <param name="id">Address id</param>
+        /// <response code="404">The specified employee does not exist, or the current user does not have access to it.</response>
         [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<Address>> GetAddress(int id)
         {
             var address = await _context.Address.FindAsync(id);
@@ -38,7 +49,7 @@ namespace LunchFinder.Server.Tags
             {
                 return NotFound();
             }
-
+            
             return address;
         }
 
