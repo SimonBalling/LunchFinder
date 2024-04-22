@@ -1,9 +1,10 @@
-using System.Configuration;
+﻿using System.Configuration;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using LunchFinder.Server.Data;
 using LunchFinder.Server.Tags;
+using LunchFinder.Server.Places;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,8 @@ builder.Services.AddDbContext<LunchFinderServerContext>(options =>
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApiDocument();
+
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
@@ -34,6 +37,12 @@ else
 app.UseOpenApi();
 app.UseSwaggerUI();
 
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+};
+
 app.UseHttpsRedirection();
 app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
@@ -45,6 +54,8 @@ app.MapControllers();
 app.MapFallbackToFile("index.html");
 
 app.MapTagEndpoints();
+
+app.MapPlaceEndpoints();
 
 
 app.Run();
