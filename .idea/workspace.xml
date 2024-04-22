@@ -1,8 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3cd74c1c-b5b0-4c70-8a69-fc77dd63bdc4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/LunchFinder/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/LunchFinder/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/LunchFinder/FileContentIndex/2a7ab850-42ec-4644-abd2-f165e4537ca0.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/LunchFinder/FileContentIndex/554e2ccf-cae3-4be7-8e01-20ae5df1a3ab.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/LunchFinder/FileContentIndex/6c446805-aa3f-41ba-8200-8ea3bea3f3fd.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/LunchFinder/FileContentIndex/84b1e131-798c-4325-900a-3c3ff8b24277.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/LunchFinder/FileContentIndex/c1949d14-9e40-472f-b880-39c9a0013632.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/LunchFinder/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/LunchFinder/v17/.futdcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/LunchFinder/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/LunchFinder/v17/DocumentLayout.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/lunchfinder.metadata.v7.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/lunchfinder.metadata.v7.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/lunchfinder.projects.v7.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/lunchfinder.projects.v7.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LunchFinder.sln" beforeDir="false" afterPath="$PROJECT_DIR$/LunchFinder.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LunchFinder/Client/LunchFinder.Client.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LunchFinder/Client/LunchFinder.Client.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LunchFinder/Client/Pages/Index.razor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LunchFinder/Client/Pages/Index.razor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LunchFinder/Server/Controllers/TagEndpoints.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LunchFinder/Server/Data/LunchFinderServerContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LunchFinder/Server/Data/LunchFinderServerContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LunchFinder/Server/LunchFinder.Server.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LunchFinder/Server/LunchFinder.Server.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LunchFinder/Server/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LunchFinder/Server/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LunchFinder/Shared/LunchFinder.Shared.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LunchFinder/Shared/Models/Tag.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/swagger-initializer.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/swagger-initializer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger.yaml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,23 +36,27 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2fRACBGTZygBqudGPQ3KrqPh5Iy" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -44,7 +72,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1713753388174</updated>
-      <workItem from="1713753389390" duration="5000" />
+      <workItem from="1713753389390" duration="607000" />
+      <workItem from="1713759941230" duration="37000" />
     </task>
     <servers />
   </component>
