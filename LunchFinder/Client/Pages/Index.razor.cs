@@ -1,17 +1,15 @@
-﻿namespace LunchFinder.Client.Pages
+﻿namespace LunchFinder.Client.Pages;
+
+using Lunchfinder.Api;
+
+public partial class Index
 {
-
-    public partial class Index
+    public async void test()
     {
+        var client = new TagsClient("localhost:5721", new HttpClient());
 
-        public async void test()
-        {
-            var client = new Lunchfinder.Api.TagsClient("localhost:5721", new HttpClient());
-            
-            
-            var tag = await client.GetTagAsync(1);
-            Console.WriteLine(tag.Name);
-        }
 
+        var tag = await client.GetTagAsync(1);
+        Console.WriteLine(tag.Name);
     }
 }
