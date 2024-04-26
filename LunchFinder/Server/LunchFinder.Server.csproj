@@ -8,6 +8,7 @@
 	  <RuntimeIdentifier>win-x64</RuntimeIdentifier>
 	  <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
 	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+	  <Configurations>Debug;Release;GitHubActionDebug</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
