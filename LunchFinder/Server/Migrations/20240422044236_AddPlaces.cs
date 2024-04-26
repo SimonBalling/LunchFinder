@@ -16,7 +16,7 @@ namespace LunchFinder.Server.Migrations
                 table: "Tags");
 
             migrationBuilder.AlterColumn<int>(
-                name: "Id",
+                name: "ID",
                 table: "Tags",
                 type: "int",
                 nullable: false,
@@ -72,7 +72,7 @@ namespace LunchFinder.Server.Migrations
                         name: "FK_Places_Address_AddressId",
                         column: x => x.AddressId,
                         principalTable: "Address",
-                        principalColumn: "Id",
+                        principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
@@ -96,7 +96,7 @@ namespace LunchFinder.Server.Migrations
                         name: "FK_ContactInformation_Places_PlaceId",
                         column: x => x.PlaceId,
                         principalTable: "Places",
-                        principalColumn: "Id");
+                        principalColumn: "ID");
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -120,7 +120,7 @@ namespace LunchFinder.Server.Migrations
                 table: "Tags",
                 column: "PlaceId",
                 principalTable: "Places",
-                principalColumn: "Id");
+                principalColumn: "ID");
         }
 
         /// <inheritdoc />
@@ -148,7 +148,7 @@ namespace LunchFinder.Server.Migrations
                 table: "Tags");
 
             migrationBuilder.AlterColumn<int>(
-                name: "Id",
+                name: "ID",
                 table: "Tags",
                 type: "int",
                 nullable: false,

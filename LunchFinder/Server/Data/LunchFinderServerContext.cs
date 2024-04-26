@@ -1,20 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+
+namespace LunchFinder.Server.Data;
+
 using Microsoft.EntityFrameworkCore;
-using LunchFinder.Server.Tags;
-using LunchFinder.Server.Places;
 
-namespace LunchFinder.Server.Data
+public class LunchFinderServerContext(DbContextOptions<LunchFinderServerContext> options) : DbContext(options)
 {
-    using Places;
+    public DbSet<Tag> Tags { get; set; } = default!;
+    public DbSet<Place> Places { get; set; } = default!;
 
-    public class LunchFinderServerContext(DbContextOptions<LunchFinderServerContext> options) : DbContext(options)
-    {
-        public DbSet<Tag> Tags { get; set; } = default!;
-        public DbSet<Place> Places { get; set; } = default!;
-
-public DbSet<LunchFinder.Server.Places.Address> Address { get; set; } = default!;
-    }
+    public DbSet<Address> Address { get; set; } = default!;
 }

@@ -1,116 +1,88 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member - Will be done later
+
+namespace LunchFinder.Server.Tags;
+
 using LunchFinder.Server.Data;
+using Microsoft.EntityFrameworkCore;
 
-namespace LunchFinder.Server.src.Tags
+[Route("api/[controller]")]
+[ApiController]
+public class TagsController(LunchFinderServerContext context) : ControllerBase
 {
-    using Microsoft.AspNetCore.Http.HttpResults;
-
-    [Route("api/[controller]")]
-    [ApiController]
-    public class TagsController : ControllerBase
+    // GET: api/Tags
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<Tag>>> GetTags()
     {
-        private readonly LunchFinderServerContext _context;
+        return await context.Tags.ToListAsync();
+    }
 
-        public TagsController(LunchFinderServerContext context)
+    /// <summary>
+    ///     Get Tag by ID
+    /// </summary>
+    /// <param name="id">The tags ID</param>
+    /// <returns></returns>
+    /// <response code="404">fghfghf</response>
+    [HttpGet("{id}")]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    public async Task<ActionResult<Tag>> GetTag(int id)
+    {
+        var tag = await context.Tags.FindAsync(id);
+
+        if (tag == null) return NotFound();
+
+        return tag;
+    }
+
+    // PUT: api/Tags/5
+    // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+    [HttpPut("{id}")]
+    public async Task<IActionResult> PutTag(int id, Tag tag)
+    {
+        if (id != tag.Id) return BadRequest();
+
+        context.Entry(tag).State = EntityState.Modified;
+
+        try
         {
-            _context = context;
+            await context.SaveChangesAsync();
         }
-
-        // GET: api/Tags
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Tag>>> GetTags()
+        catch (DbUpdateConcurrencyException)
         {
-            return await _context.Tags.ToListAsync();
-        }
-
-        /// <summary>
-        /// Get Tag by Id
-        /// </summary>
-        /// <param name="id">The tags Id</param>
-        /// <returns></returns>
-        /// <response code="404">fghfghf</response>
-        [HttpGet("{id}")]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<Tag>> GetTag(int id)
-        {
-            var tag = await _context.Tags.FindAsync(id);
-
-            if (tag == null)
-            {
+            if (!TagExists(id))
                 return NotFound();
-            }
-
-            return tag;
+            throw;
         }
 
-        // PUT: api/Tags/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutTag(int id, Tag tag)
-        {
-            if (id != tag.Id)
-            {
-                return BadRequest();
-            }
+        return NoContent();
+    }
 
-            _context.Entry(tag).State = EntityState.Modified;
+    // POST: api/Tags
+    // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+    [HttpPost]
+    public async Task<ActionResult<Tag>> PostTag(Tag tag)
+    {
+        context.Tags.Add(tag);
+        await context.SaveChangesAsync();
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!TagExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        return CreatedAtAction("GetTag", new { id = tag.Id }, tag);
+    }
 
-            return NoContent();
-        }
+    // DELETE: api/Tags/5
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteTag(int id)
+    {
+        var tag = await context.Tags.FindAsync(id);
+        if (tag == null) return NotFound();
 
-        // POST: api/Tags
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<Tag>> PostTag(Tag tag)
-        {
-            _context.Tags.Add(tag);
-            await _context.SaveChangesAsync();
+        context.Tags.Remove(tag);
+        await context.SaveChangesAsync();
 
-            return CreatedAtAction("GetTag", new { id = tag.Id }, tag);
-        }
+        return NoContent();
+    }
 
-        // DELETE: api/Tags/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteTag(int id)
-        {
-            var tag = await _context.Tags.FindAsync(id);
-            if (tag == null)
-            {
-                return NotFound();
-            }
-
-            _context.Tags.Remove(tag);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
-
-        private bool TagExists(int id)
-        {
-            return _context.Tags.Any(e => e.Id == id);
-        }
+    private bool TagExists(int id)
+    {
+        return context.Tags.Any(e => e.Id == id);
     }
 }
