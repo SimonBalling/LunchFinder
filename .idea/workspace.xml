@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cd74c1c-b5b0-4c70-8a69-fc77dd63bdc4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/dist/swagger-initializer.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/swagger-initializer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/LunchFinder/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/LunchFinder/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/LunchFinder/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/LunchFinder/v17/.futdcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/lunchfinder.metadata.v7.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/lunchfinder.metadata.v7.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/lunchfinder.projects.v7.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/lunchfinder.projects.v7.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713753388174</updated>
       <workItem from="1713753389390" duration="607000" />
-      <workItem from="1713759941230" duration="463000" />
+      <workItem from="1713759941230" duration="1064000" />
     </task>
     <servers />
   </component>

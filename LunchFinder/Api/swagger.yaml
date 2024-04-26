@@ -105,6 +105,107 @@ paths:
               schema:
                 type: string
                 format: binary
+  /api/Places:
+    get:
+      tags:
+      - Places
+      operationId: Places_GetPlaces
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Place'
+    post:
+      tags:
+      - Places
+      operationId: Places_PostPlace
+      requestBody:
+        x-name: place
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Place'
+        required: true
+        x-position: 1
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Place'
+  /api/Places/{id}:
+    get:
+      tags:
+      - Places
+      operationId: Places_GetPlace
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+        x-position: 1
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Place'
+    put:
+      tags:
+      - Places
+      operationId: Places_PutPlace
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+        x-position: 1
+      requestBody:
+        x-name: place
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Place'
+        required: true
+        x-position: 2
+      responses:
+        200:
+          description: ''
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+    delete:
+      tags:
+      - Places
+      operationId: Places_DeletePlace
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+        x-position: 1
+      responses:
+        200:
+          description: ''
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
 components:
   schemas:
     Tag:
@@ -117,4 +218,54 @@ components:
         name:
           type: string
         description:
+          type: string
+    Place:
+      type: object
+      additionalProperties: false
+      properties:
+        id:
+          type: integer
+          format: int32
+        name:
+          type: string
+        description:
+          type: string
+        tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tag'
+        address:
+          $ref: '#/components/schemas/Address'
+        contactInformation:
+          type: array
+          nullable: true
+          items:
+            $ref: '#/components/schemas/ContactInformation'
+    Address:
+      type: object
+      additionalProperties: false
+      properties:
+        id:
+          type: integer
+          format: int32
+        street:
+          type: string
+        city:
+          type: string
+        number:
+          type: string
+        postalCode:
+          type: string
+        country:
+          type: string
+    ContactInformation:
+      type: object
+      additionalProperties: false
+      properties:
+        id:
+          type: integer
+          format: int32
+        description:
+          type: string
+        value:
           type: string

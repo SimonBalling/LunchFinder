@@ -6,10 +6,10 @@
 
         public void test()
         {
-            var client = new Lunchfinder.Api.Client("localhost:5721", new HttpClient());
+            var client = new Lunchfinder.Api.TagsClient("localhost:5721", new HttpClient());
             
             
-            var task = client.GetAllTagsAsync();
+            var task = client.GetTagsAsync();
             Console.WriteLine(task.Result);
         }
 
