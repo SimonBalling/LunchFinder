@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LunchFinder.Client", "Lunch
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LunchFinder.Api", "LunchFinder\Api\LunchFinder.Api.csproj", "{97DBE1DA-5A2F-436A-8A98-9E11DFEEA618}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "sHARED\Shared.csproj", "{F667FF81-EA96-4D78-98A6-54C0EC125170}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{97DBE1DA-5A2F-436A-8A98-9E11DFEEA618}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97DBE1DA-5A2F-436A-8A98-9E11DFEEA618}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97DBE1DA-5A2F-436A-8A98-9E11DFEEA618}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F667FF81-EA96-4D78-98A6-54C0EC125170}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F667FF81-EA96-4D78-98A6-54C0EC125170}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F667FF81-EA96-4D78-98A6-54C0EC125170}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F667FF81-EA96-4D78-98A6-54C0EC125170}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
