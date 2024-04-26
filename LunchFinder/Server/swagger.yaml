@@ -1,0 +1,653 @@
+x-generator: NSwag v14.0.7.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))
+openapi: 3.0.0
+info:
+  title: My Title
+  version: 1.0.0
+paths:
+  /api/Tags:
+    get:
+      tags:
+      - Tags
+      operationId: Tags_GetTags
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Tag'
+    post:
+      tags:
+      - Tags
+      operationId: Tags_PostTag
+      requestBody:
+        x-name: tag
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Tag'
+        required: true
+        x-position: 1
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tag'
+  /api/Tags/{id}:
+    get:
+      tags:
+      - Tags
+      summary: Get Tag by ID
+      operationId: Tags_GetTag
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: The tags ID
+        schema:
+          type: integer
+          format: int32
+        x-position: 1
+      responses:
+        404:
+          description: fghfghf
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tag'
+    put:
+      tags:
+      - Tags
+      operationId: Tags_PutTag
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+        x-position: 1
+      requestBody:
+        x-name: tag
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Tag'
+        required: true
+        x-position: 2
+      responses:
+        200:
+          description: ''
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+    delete:
+      tags:
+      - Tags
+      operationId: Tags_DeleteTag
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+        x-position: 1
+      responses:
+        200:
+          description: ''
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+  /api/Places:
+    get:
+      tags:
+      - Places
+      operationId: Places_GetPlaces
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Place'
+    post:
+      tags:
+      - Places
+      operationId: Places_PostPlace
+      requestBody:
+        x-name: place
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Place'
+        required: true
+        x-position: 1
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Place'
+  /api/Places/{id}:
+    get:
+      tags:
+      - Places
+      operationId: Places_GetPlace
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+        x-position: 1
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Place'
+    put:
+      tags:
+      - Places
+      operationId: Places_PutPlace
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+        x-position: 1
+      requestBody:
+        x-name: place
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Place'
+        required: true
+        x-position: 2
+      responses:
+        200:
+          description: ''
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+    delete:
+      tags:
+      - Places
+      operationId: Places_DeletePlace
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+        x-position: 1
+      responses:
+        200:
+          description: ''
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+components:
+  schemas:
+    Tag:
+      type: object
+      description: "Represents a tag\n            "
+      additionalProperties: false
+      properties:
+        id:
+          type: integer
+          description: "ID generated by the database\n            "
+          format: int32
+        name:
+          type: string
+          description: "Display name of the tag\n            "
+          maxLength: 50
+        description:
+          type: string
+          description: "Description of the tag\n            "
+          maxLength: 500
+        color:
+          description: "The color the tag should be rendered in\n            "
+          oneOf:
+          - $ref: '#/components/schemas/Color'
+    Color:
+      type: object
+      additionalProperties: false
+      properties:
+        transparent:
+          $ref: '#/components/schemas/Color'
+        aliceBlue:
+          $ref: '#/components/schemas/Color'
+        antiqueWhite:
+          $ref: '#/components/schemas/Color'
+        aqua:
+          $ref: '#/components/schemas/Color'
+        aquamarine:
+          $ref: '#/components/schemas/Color'
+        azure:
+          $ref: '#/components/schemas/Color'
+        beige:
+          $ref: '#/components/schemas/Color'
+        bisque:
+          $ref: '#/components/schemas/Color'
+        black:
+          $ref: '#/components/schemas/Color'
+        blanchedAlmond:
+          $ref: '#/components/schemas/Color'
+        blue:
+          $ref: '#/components/schemas/Color'
+        blueViolet:
+          $ref: '#/components/schemas/Color'
+        brown:
+          $ref: '#/components/schemas/Color'
+        burlyWood:
+          $ref: '#/components/schemas/Color'
+        cadetBlue:
+          $ref: '#/components/schemas/Color'
+        chartreuse:
+          $ref: '#/components/schemas/Color'
+        chocolate:
+          $ref: '#/components/schemas/Color'
+        coral:
+          $ref: '#/components/schemas/Color'
+        cornflowerBlue:
+          $ref: '#/components/schemas/Color'
+        cornsilk:
+          $ref: '#/components/schemas/Color'
+        crimson:
+          $ref: '#/components/schemas/Color'
+        cyan:
+          $ref: '#/components/schemas/Color'
+        darkBlue:
+          $ref: '#/components/schemas/Color'
+        darkCyan:
+          $ref: '#/components/schemas/Color'
+        darkGoldenrod:
+          $ref: '#/components/schemas/Color'
+        darkGray:
+          $ref: '#/components/schemas/Color'
+        darkGreen:
+          $ref: '#/components/schemas/Color'
+        darkKhaki:
+          $ref: '#/components/schemas/Color'
+        darkMagenta:
+          $ref: '#/components/schemas/Color'
+        darkOliveGreen:
+          $ref: '#/components/schemas/Color'
+        darkOrange:
+          $ref: '#/components/schemas/Color'
+        darkOrchid:
+          $ref: '#/components/schemas/Color'
+        darkRed:
+          $ref: '#/components/schemas/Color'
+        darkSalmon:
+          $ref: '#/components/schemas/Color'
+        darkSeaGreen:
+          $ref: '#/components/schemas/Color'
+        darkSlateBlue:
+          $ref: '#/components/schemas/Color'
+        darkSlateGray:
+          $ref: '#/components/schemas/Color'
+        darkTurquoise:
+          $ref: '#/components/schemas/Color'
+        darkViolet:
+          $ref: '#/components/schemas/Color'
+        deepPink:
+          $ref: '#/components/schemas/Color'
+        deepSkyBlue:
+          $ref: '#/components/schemas/Color'
+        dimGray:
+          $ref: '#/components/schemas/Color'
+        dodgerBlue:
+          $ref: '#/components/schemas/Color'
+        firebrick:
+          $ref: '#/components/schemas/Color'
+        floralWhite:
+          $ref: '#/components/schemas/Color'
+        forestGreen:
+          $ref: '#/components/schemas/Color'
+        fuchsia:
+          $ref: '#/components/schemas/Color'
+        gainsboro:
+          $ref: '#/components/schemas/Color'
+        ghostWhite:
+          $ref: '#/components/schemas/Color'
+        gold:
+          $ref: '#/components/schemas/Color'
+        goldenrod:
+          $ref: '#/components/schemas/Color'
+        gray:
+          $ref: '#/components/schemas/Color'
+        green:
+          $ref: '#/components/schemas/Color'
+        greenYellow:
+          $ref: '#/components/schemas/Color'
+        honeydew:
+          $ref: '#/components/schemas/Color'
+        hotPink:
+          $ref: '#/components/schemas/Color'
+        indianRed:
+          $ref: '#/components/schemas/Color'
+        indigo:
+          $ref: '#/components/schemas/Color'
+        ivory:
+          $ref: '#/components/schemas/Color'
+        khaki:
+          $ref: '#/components/schemas/Color'
+        lavender:
+          $ref: '#/components/schemas/Color'
+        lavenderBlush:
+          $ref: '#/components/schemas/Color'
+        lawnGreen:
+          $ref: '#/components/schemas/Color'
+        lemonChiffon:
+          $ref: '#/components/schemas/Color'
+        lightBlue:
+          $ref: '#/components/schemas/Color'
+        lightCoral:
+          $ref: '#/components/schemas/Color'
+        lightCyan:
+          $ref: '#/components/schemas/Color'
+        lightGoldenrodYellow:
+          $ref: '#/components/schemas/Color'
+        lightGreen:
+          $ref: '#/components/schemas/Color'
+        lightGray:
+          $ref: '#/components/schemas/Color'
+        lightPink:
+          $ref: '#/components/schemas/Color'
+        lightSalmon:
+          $ref: '#/components/schemas/Color'
+        lightSeaGreen:
+          $ref: '#/components/schemas/Color'
+        lightSkyBlue:
+          $ref: '#/components/schemas/Color'
+        lightSlateGray:
+          $ref: '#/components/schemas/Color'
+        lightSteelBlue:
+          $ref: '#/components/schemas/Color'
+        lightYellow:
+          $ref: '#/components/schemas/Color'
+        lime:
+          $ref: '#/components/schemas/Color'
+        limeGreen:
+          $ref: '#/components/schemas/Color'
+        linen:
+          $ref: '#/components/schemas/Color'
+        magenta:
+          $ref: '#/components/schemas/Color'
+        maroon:
+          $ref: '#/components/schemas/Color'
+        mediumAquamarine:
+          $ref: '#/components/schemas/Color'
+        mediumBlue:
+          $ref: '#/components/schemas/Color'
+        mediumOrchid:
+          $ref: '#/components/schemas/Color'
+        mediumPurple:
+          $ref: '#/components/schemas/Color'
+        mediumSeaGreen:
+          $ref: '#/components/schemas/Color'
+        mediumSlateBlue:
+          $ref: '#/components/schemas/Color'
+        mediumSpringGreen:
+          $ref: '#/components/schemas/Color'
+        mediumTurquoise:
+          $ref: '#/components/schemas/Color'
+        mediumVioletRed:
+          $ref: '#/components/schemas/Color'
+        midnightBlue:
+          $ref: '#/components/schemas/Color'
+        mintCream:
+          $ref: '#/components/schemas/Color'
+        mistyRose:
+          $ref: '#/components/schemas/Color'
+        moccasin:
+          $ref: '#/components/schemas/Color'
+        navajoWhite:
+          $ref: '#/components/schemas/Color'
+        navy:
+          $ref: '#/components/schemas/Color'
+        oldLace:
+          $ref: '#/components/schemas/Color'
+        olive:
+          $ref: '#/components/schemas/Color'
+        oliveDrab:
+          $ref: '#/components/schemas/Color'
+        orange:
+          $ref: '#/components/schemas/Color'
+        orangeRed:
+          $ref: '#/components/schemas/Color'
+        orchid:
+          $ref: '#/components/schemas/Color'
+        paleGoldenrod:
+          $ref: '#/components/schemas/Color'
+        paleGreen:
+          $ref: '#/components/schemas/Color'
+        paleTurquoise:
+          $ref: '#/components/schemas/Color'
+        paleVioletRed:
+          $ref: '#/components/schemas/Color'
+        papayaWhip:
+          $ref: '#/components/schemas/Color'
+        peachPuff:
+          $ref: '#/components/schemas/Color'
+        peru:
+          $ref: '#/components/schemas/Color'
+        pink:
+          $ref: '#/components/schemas/Color'
+        plum:
+          $ref: '#/components/schemas/Color'
+        powderBlue:
+          $ref: '#/components/schemas/Color'
+        purple:
+          $ref: '#/components/schemas/Color'
+        rebeccaPurple:
+          $ref: '#/components/schemas/Color'
+        red:
+          $ref: '#/components/schemas/Color'
+        rosyBrown:
+          $ref: '#/components/schemas/Color'
+        royalBlue:
+          $ref: '#/components/schemas/Color'
+        saddleBrown:
+          $ref: '#/components/schemas/Color'
+        salmon:
+          $ref: '#/components/schemas/Color'
+        sandyBrown:
+          $ref: '#/components/schemas/Color'
+        seaGreen:
+          $ref: '#/components/schemas/Color'
+        seaShell:
+          $ref: '#/components/schemas/Color'
+        sienna:
+          $ref: '#/components/schemas/Color'
+        silver:
+          $ref: '#/components/schemas/Color'
+        skyBlue:
+          $ref: '#/components/schemas/Color'
+        slateBlue:
+          $ref: '#/components/schemas/Color'
+        slateGray:
+          $ref: '#/components/schemas/Color'
+        snow:
+          $ref: '#/components/schemas/Color'
+        springGreen:
+          $ref: '#/components/schemas/Color'
+        steelBlue:
+          $ref: '#/components/schemas/Color'
+        tan:
+          $ref: '#/components/schemas/Color'
+        teal:
+          $ref: '#/components/schemas/Color'
+        thistle:
+          $ref: '#/components/schemas/Color'
+        tomato:
+          $ref: '#/components/schemas/Color'
+        turquoise:
+          $ref: '#/components/schemas/Color'
+        violet:
+          $ref: '#/components/schemas/Color'
+        wheat:
+          $ref: '#/components/schemas/Color'
+        white:
+          $ref: '#/components/schemas/Color'
+        whiteSmoke:
+          $ref: '#/components/schemas/Color'
+        yellow:
+          $ref: '#/components/schemas/Color'
+        yellowGreen:
+          $ref: '#/components/schemas/Color'
+        r:
+          type: integer
+          format: byte
+        g:
+          type: integer
+          format: byte
+        b:
+          type: integer
+          format: byte
+        a:
+          type: integer
+          format: byte
+        isKnownColor:
+          type: boolean
+        isEmpty:
+          type: boolean
+        isNamedColor:
+          type: boolean
+        isSystemColor:
+          type: boolean
+        nameAndARGBValue:
+          type: string
+        name:
+          type: string
+        value:
+          type: integer
+          format: int64
+    ProblemDetails:
+      type: object
+      additionalProperties:
+        nullable: true
+      properties:
+        type:
+          type: string
+          nullable: true
+        title:
+          type: string
+          nullable: true
+        status:
+          type: integer
+          format: int32
+          nullable: true
+        detail:
+          type: string
+          nullable: true
+        instance:
+          type: string
+          nullable: true
+    Place:
+      type: object
+      description: "Represents a place where you can get Lunch\n            "
+      additionalProperties: false
+      properties:
+        id:
+          type: integer
+          description: "ID generated by the database\n            "
+          format: int32
+        name:
+          type: string
+          description: "Name of the place\n            "
+          maxLength: 450
+        description:
+          type: string
+          description: "Description of the place\n            "
+          maxLength: 4000
+        tags:
+          type: array
+          description: "List of tags attached to the place\n            "
+          items:
+            $ref: '#/components/schemas/Tag'
+        address:
+          description: "Address of the place\n            "
+          oneOf:
+          - $ref: '#/components/schemas/Address'
+        contactInformation:
+          type: array
+          description: "A list of contact information for the place\n            "
+          nullable: true
+          items:
+            $ref: '#/components/schemas/ContactInformation'
+    Address:
+      type: object
+      description: "Represents an address\n            "
+      additionalProperties: false
+      properties:
+        id:
+          type: integer
+          description: "ID generated by the database\n            "
+          format: int32
+        street:
+          type: string
+          description: "Name of the street\n            "
+          maxLength: 200
+        city:
+          type: string
+          description: "Name of the city\n            "
+          maxLength: 200
+        number:
+          type: string
+          description: "House number\n            "
+          maxLength: 200
+        postalCode:
+          type: string
+          description: "Postal code\n            "
+          maxLength: 200
+        country:
+          type: string
+          description: "Name of the country\n            "
+          maxLength: 200
+    ContactInformation:
+      type: object
+      description: "Represents contact information\n            "
+      additionalProperties: false
+      properties:
+        id:
+          type: integer
+          description: "ID generated by the database\n            "
+          format: int32
+        description:
+          type: string
+          description: "Description of the place\n            "
+          maxLength: 500
+        value:
+          type: string
+          description: "Description of the place\n            "
+          maxLength: 500

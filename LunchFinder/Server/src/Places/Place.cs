@@ -2,6 +2,7 @@
 
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Tags;
 
 /// <summary>
 ///     Represents a place where you can get Lunch

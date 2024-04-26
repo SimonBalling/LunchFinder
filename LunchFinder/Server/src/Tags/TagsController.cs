@@ -3,6 +3,7 @@
 namespace LunchFinder.Server.Tags;
 
 using LunchFinder.Server.Data;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 [Route("api/[controller]")]

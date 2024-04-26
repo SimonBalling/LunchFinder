@@ -3,6 +3,8 @@
 namespace LunchFinder.Server.Data;
 
 using Microsoft.EntityFrameworkCore;
+using Places;
+using Tags;
 
 public class LunchFinderServerContext(DbContextOptions<LunchFinderServerContext> options) : DbContext(options)
 {
