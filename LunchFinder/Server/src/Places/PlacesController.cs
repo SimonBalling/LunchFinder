@@ -12,6 +12,8 @@ public class PlacesController(LunchFinderServerContext context) : ControllerBase
 {
     // GET: api/Places
     [HttpGet]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<IEnumerable<Place>>> GetPlaces()
     {
         return await context.Places.ToListAsync();
@@ -19,6 +21,8 @@ public class PlacesController(LunchFinderServerContext context) : ControllerBase
 
     // GET: api/Places/5
     [HttpGet("{id}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<Place>> GetPlace(int id)
     {
         var place = await context.Places.FindAsync(id);
@@ -31,6 +35,8 @@ public class PlacesController(LunchFinderServerContext context) : ControllerBase
     // PUT: api/Places/5
     // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
     [HttpPut("{id}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> PutPlace(int id, Place place)
     {
         if (id != place.Id) return BadRequest();
@@ -54,6 +60,8 @@ public class PlacesController(LunchFinderServerContext context) : ControllerBase
     // POST: api/Places
     // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
     [HttpPost]
+    [ProducesResponseType(StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<Place>> PostPlace(Place place)
     {
         context.Places.Add(place);
@@ -64,6 +72,8 @@ public class PlacesController(LunchFinderServerContext context) : ControllerBase
 
     // DELETE: api/Places/5
     [HttpDelete("{id}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> DeletePlace(int id)
     {
         var place = await context.Places.FindAsync(id);

@@ -12,6 +12,8 @@ public class TagsController(LunchFinderServerContext context) : ControllerBase
 {
     // GET: api/Tags
     [HttpGet]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<ActionResult<IEnumerable<Tag>>> GetTags()
     {
         return await context.Tags.ToListAsync();
@@ -38,6 +40,8 @@ public class TagsController(LunchFinderServerContext context) : ControllerBase
     // PUT: api/Tags/5
     // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
     [HttpPut("{id}")]
+    [ProducesResponseType(StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> PutTag(int id, Tag tag)
     {
         if (id != tag.Id) return BadRequest();
@@ -61,6 +65,8 @@ public class TagsController(LunchFinderServerContext context) : ControllerBase
     // POST: api/Tags
     // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
     [HttpPost]
+    [ProducesResponseType(StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<Tag>> PostTag(Tag tag)
     {
         context.Tags.Add(tag);
@@ -71,6 +77,8 @@ public class TagsController(LunchFinderServerContext context) : ControllerBase
 
     // DELETE: api/Tags/5
     [HttpDelete("{id}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> DeleteTag(int id)
     {
         var tag = await context.Tags.FindAsync(id);

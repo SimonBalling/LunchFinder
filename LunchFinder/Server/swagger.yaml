@@ -10,6 +10,12 @@ paths:
       - Tags
       operationId: Tags_GetTags
       responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
         200:
           description: ''
           content:
@@ -31,12 +37,18 @@ paths:
         required: true
         x-position: 1
       responses:
-        200:
+        201:
           description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Tag'
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
   /api/Tags/{id}:
     get:
       tags:
@@ -86,13 +98,14 @@ paths:
         required: true
         x-position: 2
       responses:
-        200:
+        201:
+          description: ''
+        404:
           description: ''
           content:
-            application/octet-stream:
+            application/json:
               schema:
-                type: string
-                format: binary
+                $ref: '#/components/schemas/ProblemDetails'
     delete:
       tags:
       - Tags
@@ -108,11 +121,12 @@ paths:
       responses:
         200:
           description: ''
+        404:
+          description: ''
           content:
-            application/octet-stream:
+            application/json:
               schema:
-                type: string
-                format: binary
+                $ref: '#/components/schemas/ProblemDetails'
   /api/Places:
     get:
       tags:
@@ -127,6 +141,12 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Place'
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
     post:
       tags:
       - Places
@@ -140,12 +160,18 @@ paths:
         required: true
         x-position: 1
       responses:
-        200:
+        201:
           description: ''
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Place'
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
   /api/Places/{id}:
     get:
       tags:
@@ -166,6 +192,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Place'
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
     put:
       tags:
       - Places
@@ -189,11 +221,12 @@ paths:
       responses:
         200:
           description: ''
+        404:
+          description: ''
           content:
-            application/octet-stream:
+            application/json:
               schema:
-                type: string
-                format: binary
+                $ref: '#/components/schemas/ProblemDetails'
     delete:
       tags:
       - Places
@@ -209,13 +242,35 @@ paths:
       responses:
         200:
           description: ''
+        404:
+          description: ''
           content:
-            application/octet-stream:
+            application/json:
               schema:
-                type: string
-                format: binary
+                $ref: '#/components/schemas/ProblemDetails'
 components:
   schemas:
+    ProblemDetails:
+      type: object
+      additionalProperties:
+        nullable: true
+      properties:
+        type:
+          type: string
+          nullable: true
+        title:
+          type: string
+          nullable: true
+        status:
+          type: integer
+          format: int32
+          nullable: true
+        detail:
+          type: string
+          nullable: true
+        instance:
+          type: string
+          nullable: true
     Tag:
       type: object
       description: "Represents a tag\n            "
@@ -552,27 +607,6 @@ components:
         value:
           type: integer
           format: int64
-    ProblemDetails:
-      type: object
-      additionalProperties:
-        nullable: true
-      properties:
-        type:
-          type: string
-          nullable: true
-        title:
-          type: string
-          nullable: true
-        status:
-          type: integer
-          format: int32
-          nullable: true
-        detail:
-          type: string
-          nullable: true
-        instance:
-          type: string
-          nullable: true
     Place:
       type: object
       description: "Represents a place where you can get Lunch\n            "
