@@ -9,6 +9,8 @@ using LunchFinder.Server.Data;
 
 namespace LunchFinder.Server.Tags
 {
+    using Microsoft.AspNetCore.Http.HttpResults;
+
     [Route("api/[controller]")]
     [ApiController]
     public class TagsController : ControllerBase
@@ -27,8 +29,14 @@ namespace LunchFinder.Server.Tags
             return await _context.Tags.ToListAsync();
         }
 
-        // GET: api/Tags/5
+        /// <summary>
+        /// Get Tag by Id
+        /// </summary>
+        /// <param name="id">The tags Id</param>
+        /// <returns></returns>
+        /// <response code="404">fghfghf</response>
         [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<Tag>> GetTag(int id)
         {
             var tag = await _context.Tags.FindAsync(id);

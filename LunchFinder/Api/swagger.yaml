@@ -41,22 +41,24 @@ paths:
     get:
       tags:
       - Tags
+      summary: Get Tag by Id
       operationId: Tags_GetTag
       parameters:
       - name: id
         in: path
         required: true
+        description: The tags Id
         schema:
           type: integer
           format: int32
         x-position: 1
       responses:
-        200:
-          description: ''
+        404:
+          description: fghfghf
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Tag'
+                $ref: '#/components/schemas/ProblemDetails'
     put:
       tags:
       - Tags
@@ -219,6 +221,27 @@ components:
           type: string
         description:
           type: string
+    ProblemDetails:
+      type: object
+      additionalProperties:
+        nullable: true
+      properties:
+        type:
+          type: string
+          nullable: true
+        title:
+          type: string
+          nullable: true
+        status:
+          type: integer
+          format: int32
+          nullable: true
+        detail:
+          type: string
+          nullable: true
+        instance:
+          type: string
+          nullable: true
     Place:
       type: object
       additionalProperties: false
