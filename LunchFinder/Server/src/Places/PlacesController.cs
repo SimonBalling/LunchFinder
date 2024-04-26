@@ -7,59 +7,51 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using LunchFinder.Server.Data;
 
-namespace LunchFinder.Server.Tags
+namespace LunchFinder.Server.src.Places
 {
-    using Microsoft.AspNetCore.Http.HttpResults;
-
     [Route("api/[controller]")]
     [ApiController]
-    public class TagsController : ControllerBase
+    public class PlacesController : ControllerBase
     {
         private readonly LunchFinderServerContext _context;
 
-        public TagsController(LunchFinderServerContext context)
+        public PlacesController(LunchFinderServerContext context)
         {
             _context = context;
         }
 
-        // GET: api/Tags
+        // GET: api/Places
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Tag>>> GetTags()
+        public async Task<ActionResult<IEnumerable<Place>>> GetPlaces()
         {
-            return await _context.Tags.ToListAsync();
+            return await _context.Places.ToListAsync();
         }
 
-        /// <summary>
-        /// Get Tag by Id
-        /// </summary>
-        /// <param name="id">The tags Id</param>
-        /// <returns></returns>
-        /// <response code="404">fghfghf</response>
+        // GET: api/Places/5
         [HttpGet("{id}")]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<Tag>> GetTag(int id)
+        public async Task<ActionResult<Place>> GetPlace(int id)
         {
-            var tag = await _context.Tags.FindAsync(id);
+            var place = await _context.Places.FindAsync(id);
 
-            if (tag == null)
+            if (place == null)
             {
                 return NotFound();
             }
 
-            return tag;
+            return place;
         }
 
-        // PUT: api/Tags/5
+        // PUT: api/Places/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutTag(int id, Tag tag)
+        public async Task<IActionResult> PutPlace(int id, Place place)
         {
-            if (id != tag.Id)
+            if (id != place.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(tag).State = EntityState.Modified;
+            _context.Entry(place).State = EntityState.Modified;
 
             try
             {
@@ -67,7 +59,7 @@ namespace LunchFinder.Server.Tags
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TagExists(id))
+                if (!PlaceExists(id))
                 {
                     return NotFound();
                 }
@@ -80,36 +72,36 @@ namespace LunchFinder.Server.Tags
             return NoContent();
         }
 
-        // POST: api/Tags
+        // POST: api/Places
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Tag>> PostTag(Tag tag)
+        public async Task<ActionResult<Place>> PostPlace(Place place)
         {
-            _context.Tags.Add(tag);
+            _context.Places.Add(place);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetTag", new { id = tag.Id }, tag);
+            return CreatedAtAction("GetPlace", new { id = place.Id }, place);
         }
 
-        // DELETE: api/Tags/5
+        // DELETE: api/Places/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteTag(int id)
+        public async Task<IActionResult> DeletePlace(int id)
         {
-            var tag = await _context.Tags.FindAsync(id);
-            if (tag == null)
+            var place = await _context.Places.FindAsync(id);
+            if (place == null)
             {
                 return NotFound();
             }
 
-            _context.Tags.Remove(tag);
+            _context.Places.Remove(place);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool TagExists(int id)
+        private bool PlaceExists(int id)
         {
-            return _context.Tags.Any(e => e.Id == id);
+            return _context.Places.Any(e => e.Id == id);
         }
     }
 }

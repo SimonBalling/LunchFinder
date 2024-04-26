@@ -7,10 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LunchFinder.Server", "Lunch
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LunchFinder.Client", "LunchFinder\Client\LunchFinder.Client.csproj", "{75BF302B-23CC-4928-AC8D-A98C0B68E499}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LunchFinder.Api", "LunchFinder\Api\LunchFinder.Api.csproj", "{97DBE1DA-5A2F-436A-8A98-9E11DFEEA618}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{5C0F9A52-A14F-466A-9471-DCA166F05F2D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,14 +21,6 @@ Global
 		{75BF302B-23CC-4928-AC8D-A98C0B68E499}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75BF302B-23CC-4928-AC8D-A98C0B68E499}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75BF302B-23CC-4928-AC8D-A98C0B68E499}.Release|Any CPU.Build.0 = Release|Any CPU
-		{97DBE1DA-5A2F-436A-8A98-9E11DFEEA618}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{97DBE1DA-5A2F-436A-8A98-9E11DFEEA618}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{97DBE1DA-5A2F-436A-8A98-9E11DFEEA618}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{97DBE1DA-5A2F-436A-8A98-9E11DFEEA618}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5C0F9A52-A14F-466A-9471-DCA166F05F2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5C0F9A52-A14F-466A-9471-DCA166F05F2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5C0F9A52-A14F-466A-9471-DCA166F05F2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5C0F9A52-A14F-466A-9471-DCA166F05F2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

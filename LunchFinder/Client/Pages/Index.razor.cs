@@ -4,13 +4,13 @@
     public partial class Index
     {
 
-        public void test()
+        public async void test()
         {
             var client = new Lunchfinder.Api.TagsClient("localhost:5721", new HttpClient());
             
             
-            var task = client.GetTagsAsync();
-            Console.WriteLine(task.Result);
+            var tag = await client.GetTagAsync(1);
+            Console.WriteLine(tag.Name);
         }
 
     }
